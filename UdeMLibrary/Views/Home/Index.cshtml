@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Login.css" />
+</head>
+<body>
+    <!-- Parent Container -->
+    <section class="parent-container-login">
+        <!-- Child Parent -->
+        <article class="child-container-login">
+            <!-- Left Container -->
+            <div class="left-container-login">
+                <!-- Login Container -->
+                <div class="login-container-login">
+                    <!-- Principal Title -->
+                    <div class="title-container-login">
+                        <h1 class="title1-principal-login">Welcome to</h1>
+                        <h1 class="title2-principal-login">UdeM Library</h1>
+                    </div>
+                    <!-- Form -->
+                    <form action="#" method="post" class="box-form-login">
+                        <!-- Data -->
+                        <label for="email" class="title-principal-form-login">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Please enter your Email" required class="input-email-login">
+
+                        <label for="password" class="title2-pricipal-form-login">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Please enter your Password" required class="input-email-login">
+
+                        <!-- Descriptions Container -->
+                        <div class="descriptions-container-form-login">
+                            <!-- Left -->
+                            <div class="rememberme-container-form-login">
+                                <input type="checkbox" class="rememberme-checkbox-form-login">
+                                <h1 class="title-descriptions-form-login">Remember me</h1>
+                            </div>
+                            <!-- Right -->
+                            <div class="forgot_password-container-form-login">
+                                <h1 class="title-descriptions2-form-login">Forgot Password?</h1>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <input type="submit" value="Sign in" id="signInButton" class="btn-sign_in-form-login">
+                        <a href="#" class="btn-container-google-form-login">
+                            <button class="btn-google-form-login">
+                                <img src="~/images/google-logo.png" alt="" class="img-google-form-login"/>
+                                Sign In With Google
+                            </button>
+                        </a>
+
+                        <!-- No account -->
+                        <div class="no_account-container-form-login">
+                            <div class="left-container-warning1-form-login">
+                               <h3 class="warning-title1-form-login">Don't have an Account?</h3>
+                            </div>
+                            <div class="left-container-warning2-form-login">
+                                <h3 class="warning-title2-form-login">Sign Up</h3>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Right Container -->
+                <div class="img-container-form-login">
+                    <img src="/images/library.jpg" alt="" class="img-right_container-login" />
+                </div>
+            </div>
+        </article>
+    </section>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

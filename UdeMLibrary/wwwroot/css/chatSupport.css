@@ -1,0 +1,173 @@
+﻿/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+:root {
+    /* Backgrounds */
+    --parentContainer: #9896FF;
+    --childContainer: #000000;
+    /* Form Title */
+    --title1: #ffffff;
+    --title2: #9896FF;
+    /* Label */
+    --labelEmail: #ffffff; /* 80% Transparent */
+    --labelPasswprd: #ffffff; /* 80% Transparent */
+    /* Placeholder */
+    --descriptionPlaceholder: #ffffff; /* 60% Transparent */
+    /* Inputs */
+    --inputsFormLogin: #171735;
+    /* Warnings */
+    --warning: #9896FF;
+    /* Button Titles */
+    --btnTitles: #ffffff;
+    /* chatSupport */
+    --containerChat: #8000FF;
+}
+
+/*********************************************************************************/
+/*********************************** CHAT SUPPORT ********************************/
+/*********************************************************************************/
+.chat-parent-chatSupport-userInterface {
+    width: 73.5rem;
+    height: auto;
+    background-color: var(--inputsFormLogin) !important;
+    border-radius: 25px;
+    margin: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* general container */
+.chat-container {
+    width: 100%;
+    height: auto;
+}
+
+/* first chat container */
+.chat-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: var(--containerChat);
+    border-radius: 25px 25px 0 0;
+    padding: 0.9rem;
+}
+
+/* img container */
+.img-container-userInterface{
+    width: auto;
+    height: auto;
+    margin-left: 5rem;
+}
+
+/* img */
+.img-logo-chatSupport-userInterface{
+    width: 100%;
+    height: auto;
+}
+
+/* titles container */
+.titles-container-chatSupport-userInterface {
+    width: auto;
+    height: auto;
+    margin: 18px 0 0 15px;
+}
+
+/* udem chat */
+.title-chatSupport-userInterface {
+    color: var(--title1);
+    font-weight: 600;
+}
+
+/* online */
+.title2-chatSupport-userInterface {
+    color: var(--title1);
+    font-size: 17px;
+    margin-top: -10px;
+}
+
+/* chat body */
+.chat-body {
+    width: 100%;
+    height: 42.8vh; /* here */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 10px;
+    overflow-y: auto;
+}
+
+/* Estilo para mensajes del usuario */
+.user-message {
+    background-color: #007BFF; /* Fondo azul para mensajes del usuario */
+    color: #fff; /* Texto blanco */
+    max-width: 70%; /* Ancho máximo del contenedor de mensaje del usuario */
+    align-self: flex-end; /* Alinea a la derecha */
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 8px 10px;
+}
+
+/* Estilo para mensajes del chatbot */
+.chatbot-message {
+    background-color: var(--containerChat); /* Fondo gris para mensajes del chatbot */
+    color: #fff; /* Texto blanco */
+    max-width: 70%; /* Ancho máximo del contenedor de mensaje del chatbot */
+    align-self: flex-start; /* Alinea a la izquierda */
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 8px 10px;
+}
+
+
+
+
+
+/* chat input */
+.chat-input {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+/* input container */
+.input-sec {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/* input */
+.input-chatSupport-userInterface {
+    width: 80%;
+    height: auto;
+    padding: 1.6rem;
+    text-align: center;
+    border-radius: 23px;
+    border: none;
+}
+
+/* send */
+.send {
+    width: auto;
+    height: auto;
+    position: absolute;
+    padding: 15px 17px 17px 14px;
+    border-radius: 50%;
+    border: none;
+    top: 47.2rem;
+    left: 90rem;
+    background-color: rgba(128, 0, 255, 0.5);
+}
+
+/* img */
+.img-send-chatSupport-userInterface {
+    width: auto;
+    height: auto;
+}

@@ -1,0 +1,327 @@
+﻿/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+:root {
+    /* Backgrounds */
+    --parentContainer: #9896FF;
+    --childContainer: #000000;
+    /* Form Title */
+    --title1: #ffffff;
+    --title2: #9896FF;
+    /* Label */
+    --labelEmail: #ffffff; /* 80% Transparent */
+    --labelPasswprd: #ffffff; /* 80% Transparent */
+    /* Placeholder */
+    --descriptionPlaceholder: #ffffff; /* 60% Transparent */
+    /* Inputs */
+    --inputsFormLogin: #171735;
+    /* Warnings */
+    --warning: #9896FF;
+    /* Button Titles */
+    --btnTitles: #ffffff;
+    /* chatSupport */
+    --containerChat: #8000FF;
+}
+
+/* parent container */
+.parent-container-userInterface{
+    width: 100%;
+    height: auto;
+    background-color: var(--parentContainer);
+    padding: 3rem 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* child container */
+.child-container-userInterface {
+    width: 100%;
+    height: 120px;
+    border-radius: 3rem 3rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(27, 34, 35, 0.1);
+}
+
+/* udem logo container */
+.udm-img-container-userInterface{
+    width: auto;
+    height: auto;
+    margin: 1.2rem 5rem;
+}
+
+/* img */
+.img-udem-userInterface {
+    width: auto;
+    height: auto;
+}
+
+/* search container */
+.search-container {
+    width: auto;
+    height: auto;
+    margin: 2.9rem -5rem 2.9rem 0;
+}
+
+/*  search img */
+.ic-search-userInterface{
+    position: absolute;
+    margin: -38.5px 11rem;
+}
+
+/* Estilos CSS adicionales para el input */
+.input-container {
+    position: relative;
+    width: 350px;
+    text-align: center;
+}
+
+/* Estilos para el marcador de posición (placeholder) */
+.search-input-userInterface::placeholder {
+    transition: all 0.3s ease-in-out; /* Animación suave */
+    margin-left: 18px; /* Inicialmente, mueve el marcador de posición 15px a la izquierda */
+    opacity: 0.6; /* Opacidad inicial */
+}
+
+/* Estilos para el input cuando está enfocado */
+.search-input-userInterface:focus::placeholder {
+    margin-left: 0; /* Cuando el input está enfocado, el marcador de posición vuelve a su posición original (0) */
+    opacity: 1; /* La opacidad vuelve a su valor original (1) */
+}
+
+/* input search */
+.search-input-userInterface {
+    width: 400px;
+    border: solid 1px var(--title2);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: -5rem;
+    background-color: var(--inputsFormLogin);
+    color: #808080;
+}
+
+/* description and profile container */
+.description_profile-container-userInterface {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* greeting container */
+.greeting-container-userInterface {
+    width: auto;
+    height: auto;
+    color: var(--title1);
+    margin: 2.3rem 2rem 2.3rem 3rem;
+}
+
+.title-greeting-container-userInterface{
+    font-size: 2rem;
+}
+
+/* user profile container */
+.user_profile-img-container-userInterface {
+    width: auto;
+    height: auto;
+    margin: 0.6rem 2rem 0.5rem 1.8rem;
+}
+/* user profile */
+.img-profile-userInterface {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* second container */
+.second-container-userInterface {
+    width: 100%;
+    height: auto;
+    background-color: var(--childContainer);
+    display: flex;
+    border-radius: 0 0 3rem 3rem;
+}
+
+/* navbar container */
+.navbar-container-userInterface {
+    width: 20%;
+    height: auto;
+    padding: 3rem 2rem 2rem;
+    margin: 0 0 0 1.3rem; /* here */
+}
+
+/* navbar list */
+.navbar-list-container-userInterface {
+    width: 100%;
+    height: auto;
+    background-color: var(--inputsFormLogin);
+    padding: 3.5rem 3rem 16rem 2rem;
+    border-radius: 25px;
+}
+
+.navbar-list-container-userInterface .link-navbar-userInterface i {
+    margin-right: 0.5rem; /* here */
+}
+
+/* li */
+.list-userInterface{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.link-navbar-userInterface {
+    text-decoration: none;
+    color: var(--title1);
+    font-size: 1.3rem;
+}
+
+/* books interface */
+.books-container-userInterface {
+    width: 50%;
+    height: auto;
+}
+
+/* books container */
+.child-books-container-userInterface { /* here */
+    width: 73.5rem;
+    height: auto;
+    background-color: var(--inputsFormLogin) !important;
+    border-radius: 25px;
+    margin: 3rem 1.5rem;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* title container */
+.title-books-container-userInterface{
+    width: 100%;
+    height: auto;
+}
+
+/* title */
+.title-books-userInterface{
+    margin-top: 8px;
+    font-size: 1.5rem;
+    color: var(--title1);
+}
+
+/* other books */
+.books-carousel-container-userInterface{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Carrusel 1 */
+.carousel-container.carousel-container-1 {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajusta el ancho del carrusel */
+    height: auto;
+    /* Resto de estilos para el carrusel 1 */
+}
+
+/* Carrusel 2 */
+.carousel-container.carousel-container-2 {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajusta el ancho del carrusel */
+    height: auto;
+    /* Resto de estilos para el carrusel 2 */
+}
+
+
+/* card container */
+.card {
+    width: 150px; /* Cambia el ancho de las tarjetas según tus preferencias */
+    max-height: 260px; /* Cambia la altura máxima de las tarjetas según tus preferencias */
+    border-radius: 8px;
+    padding: 8px 10px 0 10px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    margin: 0 auto; /* Añade un poco de espacio entre las tarjetas */
+    transition: transform 0.5s ease;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+/* titles */
+.book-titles-userIntrfaces {
+    font-size: 1rem; /* Ajusta el tamaño del texto del título */
+    color: black;
+    margin-top: 8px;
+}
+
+/* descriptions */
+.books-descriptions-userInterfaces {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto de la descripción */
+    color: #808080;
+}
+
+
+/* zoom */
+.card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* img */
+.books-userInterface {
+    width: auto;
+    height: auto;
+}
+
+/* title container */
+.title2-books-container-userInterface {
+    width: 100%;
+    height: auto;
+}
+
+/* title */
+.title2-books-userInterface {
+    margin-top: 1.7rem;
+    font-size: 1.5rem;
+    color: var(--title1);
+}
+
+/* Estilos CSS para los botones (inicialmente ocultos) */
+.buttons-container {
+    display: none;
+    flex-direction: column; /* Para apilar los botones verticalmente */
+    position: absolute; /* Posición absoluta con respecto a la tarjeta */
+    top: 50%; /* Alineación vertical al centro de la tarjeta */
+    left: 50%; /* Alineación horizontal al centro de la tarjeta */
+    transform: translate(-50%, -50%); /* Centrar en la tarjeta */
+}
+
+.read-button,
+.reserve-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 3px;
+    background-color: var(--title2);
+}
+
+/* Estilos para mostrar los botones en el evento hover */
+.card:hover .buttons-container {
+    display: flex;
+}
+
+/* Estilos adicionales para los botones en hover */
+.card:hover .read-button:hover,
+.card:hover .reserve-button:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,128 @@
+﻿/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+:root {
+    --borderBtns: #ff00e8;
+    --statusCard: #56ff00;
+}
+
+/*********************************************************************************/
+/************************************* CATEGORIES ********************************/
+/*********************************************************************************/
+.chat-parent-chatSupport-userInterface {
+    width: 73.5rem;
+    height: auto;
+    background-color: var(--inputsFormLogin) !important;
+    border-radius: 25px;
+    margin: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* child container */
+.parent-categories-userInterface {
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* btns */
+.btn-filter-interface{
+    padding: 9px 30px;
+    background-color: transparent;
+    border-radius: 13px;
+    border: 1px solid;
+    margin: 0 8px;
+    color: var(--borderBtns);
+}
+
+/* icns */
+i{
+    margin-right: 8px;
+}
+
+/* all books */
+.allBooks-filter-interface,
+.actionsAdventureBooks-filter-interface,
+.romanceBooks-filter-interface,
+.history-filter-interface,
+.science-filter-interface { /* here */
+    width: 100%;
+    height: auto;
+}
+
+/* margin */
+.margin-container-filter-interface {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* categories card */
+.cardBooks {
+    width: 210px; /* here */
+}
+
+/* descriptions container */
+.descriptions-box-filter-interface {
+    width: 177px;
+    height: 90px;
+    transform: scaleX(0.9);
+    display: flex;
+    position: relative;
+    top: -5.6rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Color blanco con opacidad */
+    padding: 10px;
+    border-radius: 10px; /* Ajusta el radio de las esquinas según sea necesario */
+    backdrop-filter: blur(10px); /* Agrega un efecto de desenfoque al fondo */
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+}
+
+/* box 1 descriptions */
+.description-card-filter-interface{
+    width: 50%;
+    height: auto;
+}
+
+/* title */
+.title-card-filter-interface{
+    text-align: start;
+    font-size: 16px;
+    color: white;
+}
+
+/* status */
+.descrip-card-filter-interface {
+    text-align: start;
+    font-size: 15px;
+    color: var(--statusCard);
+}
+
+/* box 2 icn */
+.icn-box-filter-interface {
+    width: 50%;
+    height: auto;
+}
+
+.btn-i-filter-interface {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    margin: 10px -15px 0 0;
+}
+
+.btn-i-filter-interface i {
+    color: white;
+    font-size: 2.1rem;
+}

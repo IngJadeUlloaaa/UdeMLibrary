@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="~/css/userInterface.css" />
+    <link rel="stylesheet" href="~/css/categories.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+        /* categories btns */
+        .hidden {
+            display: none;
+        }
+    </style>
+    @* <script src="~/js/wishlistScripts.js"></script> *@
+</head>
+<body>
+    <!-- Parent Container -->
+    <section class="parent-container-userInterface">
+        <!-- Child Container -->
+        <article class="child-container-userInterface">
+            <!-- UdeM Logo Container -->
+            <div class="udm-img-container-userInterface">
+                <img src="~/images/logo-udem.png" alt="" class="img-udem-userInterface" />
+            </div>
+
+            <!-- Search Box -->
+            <div class="search-container">
+                <div class="input-container">
+                    <input type="text" class="search-input-userInterface" placeholder="Tap here to search">
+                    <img src="~/images/ic-search.png" alt="" class="ic-search-userInterface" />
+                </div>
+            </div>
+
+            <!-- Description and Profile Container -->
+            <div class="description_profile-container-userInterface">
+                <!-- Greeting -->
+                <div class="greeting-container-userInterface">
+                    <h2 class="title-greeting-container-userInterface">Welcome Back! 👋</h2>
+                </div>
+
+                <!-- User Profile -->
+                <div class="user_profile-img-container-userInterface">
+                    <img src="~/images/gatito.jpg" alt="" class="img-profile-userInterface" />
+                </div>
+            </div>
+        </article>
+
+        <!-- Scond Container -->
+        <article class="second-container-userInterface">
+            <!-- Navbar Containr -->
+            <div class="navbar-container-userInterface">
+                <!-- Navbar and list -->
+                <ul class="navbar-list-container-userInterface">
+                    <li class="list-userInterface">
+                        <a class="link-navbar-userInterface" asp-controller="Home" asp-action="UserInterface"><i class="uil uil-estate" id="ic-userInterface"></i> Home</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a class="link-navbar-userInterface" asp-controller="Home" asp-action="categories"><i class="uil uil-book-alt" id="ic-userInterface"></i> Categories</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a asp-controller="Home" asp-action="Wishlist" class="link-navbar-userInterface"><i class="uil uil-bookmark" id="ic-userInterface"></i> Wish List</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a href="#contenido-profile" class="link-navbar-userInterface"><i class="uil uil-user" id="ic-userInterface"></i> Profile</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a href="#contenido-settings" class="link-navbar-userInterface"><i class="uil uil-setting" id="ic-userInterface"></i> Settings</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a class="link-navbar-userInterface" asp-controller="Home" asp-action="chatSupport"><i class="uil uil-comment-dots" id="ic-userInterface"></i> Chat Support</a>
+                    </li>
+                    <li class="list-userInterface">
+                        <a href="#contenido-logOut" class="link-navbar-userInterface"><i class="uil uil-signout" id="ic-userInterface"></i> Log Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Books Interface -->
+            <article class="chat-parent-chatSupport-userInterface">
+                <!-- filter btns -->
+                <div class="parent-categories-userInterface">
+                    <!-- all -->
+                    <button class="btn-filter-interface" onclick="mostrarContenido('allBooks')">
+                        <i class="uil uil-book-open"></i>All
+                    </button>
+                    <!-- Action and Adventure -->
+                    <button class="btn-filter-interface" onclick="mostrarContenido('actionsAdventures')">
+                        <i class="uil uil-plane-departure"></i>Action - Adventure
+                    </button>
+                    <!-- romance -->
+                    <button class="btn-filter-interface" onclick="mostrarContenido('romanceBooks')">
+                        <i class="uil uil-heart"></i>Romance
+                    </button>
+                    <!-- history -->
+                    <button class="btn-filter-interface" onclick="mostrarContenido('historyBooks')">
+                        <i class="uil uil-map"></i>History
+                    </button>
+                    <!-- science -->
+                    <button class="btn-filter-interface" onclick="mostrarContenido('scienceBooks')">
+                        <i class="uil uil-dna"></i>Science
+                    </button>
+                </div>
+                <!-- all books -->
+                <article class="allBooks-filter-interface" id="allBooks">
+                    <!--margin div -->
+                    <div class="margin-container-filter-interface">
+                        <!-- 1 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img1.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <!-- categories.cshtml -->
+                                    <form asp-controller="Home" asp-action="AddToWishlist" method="post">
+                                        <input type="hidden" name="bookId" value="1" /> <!-- Cambia el valor según el libro -->
+                                        <button type="submit" class="btn-i-filter-interface">Reservar</button>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img2.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(2)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img3.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(3)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img4.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(4)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- actions - adventures books -->
+                <article class="actionsAdventureBooks-filter-interface" id="actionsAdventures">
+                    <!--margin div -->
+                    <div class="margin-container-filter-interface">
+                        <!-- 1 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img4.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(5)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img3.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(6)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img2.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(7)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img1.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(8)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Romance books -->
+                <article class="romanceBooks-filter-interface" id="romanceBooks">
+                    <!--margin div -->
+                    <div class="margin-container-filter-interface">
+                        <!-- 1 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img2.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(9)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img3.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(10)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img4.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(11)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img5.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(12)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- history books -->
+                <article class="history-filter-interface" id="historyBooks">
+                    <!--margin div -->
+                    <div class="margin-container-filter-interface">
+                        <!-- 1 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img4.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(13)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img3.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(14)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img2.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(15)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img1.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(16)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- science books -->
+                <article class="science-filter-interface" id="scienceBooks">
+                    <!--margin div -->
+                    <div class="margin-container-filter-interface">
+                        <!-- 1 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img1.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(17)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img2.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(18)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img3.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(19)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 card -->
+                        <div class="cardBooks">
+                            <img src="~/images/img4.png" class="img-card-filter-interface" alt="Imagen 1">
+                            <div class="descriptions-box-filter-interface">
+                                <div class="description-card-filter-interface">
+                                    <h2 class="title-card-filter-interface">Red white Red blue</h2>
+                                    <p class="descrip-card-filter-interface">Available</p>
+                                </div>
+                                <div class="icn-box-filter-interface">
+                                    <button class="btn-i-filter-interface" onclick="addToWishlist(20)">
+                                        <i class="uil uil-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </article>
+    </section>
+    <!-- categories btns -->
+    <script>
+        function mostrarContenido(tipo) {
+            const allBooks = document.getElementById('allBooks'); /* first */
+            const actionsAdventures = document.getElementById('actionsAdventures'); /* second */
+            const romanceBooks = document.getElementById('romanceBooks'); /* third */
+            const historyBooks = document.getElementById('historyBooks'); /* fourth */
+            const scienceBooks = document.getElementById('scienceBooks'); /* fifth */
+
+            // Oculta ambos contenedores
+            allBooks.classList.add('hidden');
+            actionsAdventures.classList.add('hidden');
+            romanceBooks.classList.add('hidden');
+            historyBooks.classList.add('hidden');
+            scienceBooks.classList.add('hidden');
+
+            // Muestra el contenido según el botón presionado
+            if (tipo === 'allBooks') {
+                allBooks.classList.remove('hidden');
+            } else if (tipo === 'actionsAdventures') {
+                actionsAdventures.classList.remove('hidden');
+            } else if (tipo === 'romanceBooks') {
+                romanceBooks.classList.remove('hidden');
+            } else if (tipo === 'historyBooks') {
+                historyBooks.classList.remove('hidden');
+            } else if (tipo === 'scienceBooks') {
+                scienceBooks.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

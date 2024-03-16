@@ -1,0 +1,236 @@
+/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+:root {
+
+    /* Backgrounds */
+    --parentContainer: #9896FF;
+    --childContainer: #000000;
+
+    /* Form Title */
+    --title1: #ffffff;
+    --title2: #9896FF;
+
+    /* Label */
+    --labelEmail: #ffffff; /* 80% Transparent */
+    --labelPasswprd: #ffffff; /* 80% Transparent */
+
+    /* Placeholder */
+    --descriptionPlaceholder: #ffffff; /* 60% Transparent */
+
+    /* Inputs */
+    --inputsFormLogin: #171735;
+
+    /* Warnings */
+    --warning: #9896FF;
+
+    /* Button Titles */
+    --btnTitles: #ffffff;
+}
+
+.parent-container-login{
+    width: 100%;
+    height: auto;
+    padding: 8rem 6rem;
+    background-color: var(--parentContainer);
+}
+
+.child-container-login{
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    background-color: var(--childContainer);
+}
+
+.left-container-login{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* login container */
+.login-container-login {
+    width: 50%;
+    height: auto;
+    /* here padding */
+}
+
+/* title container */
+.title-container-login {
+    margin: 5rem 0 -3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* titles */
+.title1-principal-login {
+    font-size: 3.5rem;
+    color: var(--title1);
+    margin: 0 0 0 -10rem;
+}
+
+.title2-principal-login {
+    font-size: 3.1rem;
+    margin: 0 0 0 7rem;
+    color: var(--title2);
+}
+
+/* login box */
+.box-form-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 4.2rem 13rem;
+}
+
+/* Labels */
+.title-principal-form-login {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.title2-pricipal-form-login {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* inputs */
+.input-email-login {
+    width: 100%;
+    border: solid 1px var(--title2);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--inputsFormLogin);
+    color: #808080;
+}
+
+/* descriptions */
+.descriptions-container-form-login {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* left */
+.rememberme-container-form-login {
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+/* check */
+.rememberme-checkbox-form-login{
+    margin-top: 10px; /* here */
+}
+
+/* remember me */
+.title-descriptions-form-login {
+    margin: 10px 0 0 5px; /* here */
+    font-size: 1rem;
+    color: var(--title2);
+}
+
+/* right */
+.forgot_password-container-form-login {
+    width: 50%;
+    height: auto;
+}
+
+/* forgot password */
+.title-descriptions2-form-login {
+    margin: 10px 0 0 5px; /* here */
+    font-size: 1rem;
+    color: var(--title2);
+    text-align: end;
+}
+
+/* Btn */
+.btn-sign_in-form-login {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    border: solid 1px var(--title2);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--inputsFormLogin);
+    color: var(--btnTitles);
+}
+
+/* btn google */
+.btn-container-google-form-login{
+    width: 100%;
+    height: auto;
+}
+
+.btn-google-form-login {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    border: solid 1px var(--title2);
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--inputsFormLogin);
+    color: var(--btnTitles);
+}
+
+/* img logo google */
+.img-google-form-login{
+    margin-top: -6px;
+}
+
+/* no account */
+.no_account-container-form-login{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* container don't */
+.left-container-warning1-form-login{
+    margin-top: 10px;
+}
+
+/* don't have an account */
+.warning-title1-form-login {
+    font-size: 1rem;
+    color: var(--title1);
+}
+
+/* container sign up */
+.left-container-warning2-form-login {
+    margin-top: 10px;
+}
+
+/* sign up */
+.warning-title2-form-login {
+    font-size: 1rem;
+    margin: 0 0 0 8px;
+    color: var(--title2);
+}
+
+/* right container */
+.img-container-form-login {
+    width: 50%;
+    height: auto;
+}
+
+/* img */  
+.img-right_container-login {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 2rem 2rem 0;
+}

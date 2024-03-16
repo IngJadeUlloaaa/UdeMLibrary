@@ -1,0 +1,22 @@
+﻿/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+/*********************************************************************************/
+/************************************* Wishlist **********************************/
+/*********************************************************************************/
+.chat-parent-chatSupport-userInterface {
+    width: 73.5rem;
+    height: auto;
+    background-color: var(--inputsFormLogin) !important;
+    border-radius: 25px;
+    margin: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}

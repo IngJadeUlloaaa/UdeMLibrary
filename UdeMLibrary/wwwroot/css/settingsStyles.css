@@ -1,0 +1,62 @@
+﻿/* reem kufi ink */
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+/*********************************************************************************/
+/************************************* CATEGORIES ********************************/
+/*********************************************************************************/
+.settings-parent-chatSupport-userInterface {
+    width: 73.5rem;
+    height: auto;
+    background-color: var(--inputsFormLogin) !important;
+    border-radius: 25px;
+    margin: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --titleDescription: #fff;
+    --icnColor: #ff00e8;
+}
+
+/* general container */
+.settings-container-userInterface{
+    width: 100%;
+    height: auto;
+    margin: 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* preferences title */
+.title-settings-userInterface{
+    color: var(--icnColor);
+    font-size: 2rem;
+}
+
+/* box 1 and 2 */
+.box1-settings-userInterface {
+    width: 100%;
+    height: auto;
+}
+
+/* descriptions all */
+.description-settings-userInterface{
+    color: var(--titleDescription);
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+/* icn */
+.description-settings-userInterface i{
+    color: var(--icnColor);
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
